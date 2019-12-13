@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Application Engineering | UP793414 </title>
+    <link rel="stylesheet" href="master.css">
+    <script src="character.js" type="application/javascript"></script>
+  </head>
+  <body id="body">
+
+    <!-- Buttons -->
+    <div class="switch">
+      <button onclick="header1()" class="inner-outline" type="button">H1</button>
+      <button onclick="header2()" class="inner-outline" type="button">H2</button>
+      <button onclick="text()" class="inner-outline" type="button">P</button>
+      <button onclick="darktolight()" class="inner-switch" type="button" name="dark_light" title="Toggle dark/light mode">💡</button>
+    </div>
+
+    <!-- Divbar where users can input title and content -->
+    <div id="title" contenteditable="true"> </div>
+    <div id="textbox" contenteditable="true" onkeydown="charcount(this.value)"ondrop="drop(saved)" ondragover="allowDrop(saved)">
+    </div>
+    <button onclick="savetext()" class="save-button" type="button">SAVE</button>
+    <span id="current"> </span>
+
+    <!-- Section that shows saved text -->
+    <div id="SavedText">
+      <b>Your Saved Texts </b>
+      <hr>
+    <li id="dragtext" draggable="true" ondragstart="drag(event)"> Text here</li>
+    <div>
+
+      <!-- Javscript -->
+    <script src="index.js" type="application/javascript"></script>
+    <script src="dragdrop.js" type="application/javascript"></script>
+  </body>
+</html>
